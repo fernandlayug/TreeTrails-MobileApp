@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TreeTails.Views.HomePage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="treetails.png"
+                   HeightRequest="450"
+                   WidthRequest="450"
+                   VerticalOptions="CenterAndExpand"/>
+            <AbsoluteLayout Margin="135, -60, 30, 50">
+                <Button Text="Get Started"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        WidthRequest="150"
+                        CornerRadius="25"
+                        Clicked="ListTree">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="#3ECFC5" Offset="0.1" />
+                            <GradientStop Color="#5DD3AA" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+            </AbsoluteLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

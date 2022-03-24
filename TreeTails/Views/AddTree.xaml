@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TreeTails.Views.AddTree"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Margin="0, -125, 0, 0"
+                   Source="treetailsbackground2.png"
+                   HeightRequest="450"
+                   WidthRequest="450"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Start"/>
+            <Image Margin="17, -110, 0, 0"
+                   WidthRequest="300"
+                   HorizontalOptions="Start"
+                   Source="addtreeinformation.png"/>
+            <AbsoluteLayout Margin="0, 10, 0, 0">
+                <Entry x:Name="TreeCode"
+                       Text="{Binding TreeCode}" Margin="15, 0, 0, 0"
+                       AbsoluteLayout.LayoutBounds="0, 0, 0.5, 40"
+                       AbsoluteLayout.LayoutFlags="XProportional, WidthProportional"
+                       Placeholder="Tree Code" 
+                       HorizontalOptions="FillAndExpand"
+                       FontSize="12"/>
+                <Entry x:Name="InitialIdentification"
+                       Text="{Binding InitialIdentification}" Margin="0, 0, 15, 0"
+                       AbsoluteLayout.LayoutBounds="1, 0, 0.5, 40"
+                       AbsoluteLayout.LayoutFlags="XProportional, WidthProportional"
+                       Placeholder="Initial Identification" 
+                       HorizontalOptions="FillAndExpand"
+                       FontSize="12"/>
+                <Entry  Margin="15, 0, 0, 0"
+                       AbsoluteLayout.LayoutBounds="0, 50, 0.96, 40"
+                       AbsoluteLayout.LayoutFlags="XProportional, WidthProportional"
+                       x:Name="Notes"
+                       Text="{Binding Notes}"
+                       Placeholder="Notes"
+                       HorizontalOptions="FillAndExpand"
+                       FontSize="12"/>
+                <Entry   x:Name="GPSCoordinates"
+                       Text="{Binding GPSCoordinates}" Margin="15, 0, 0, 0"
+                       AbsoluteLayout.LayoutBounds="0, 100, 0.5, 40"
+                       AbsoluteLayout.LayoutFlags="XProportional, WidthProportional"
+                       Placeholder="GPS Coordinates" 
+                       HorizontalOptions="FillAndExpand"
+                       FontSize="12"/>
+                <Entry  x:Name="Location"
+                       Text="{Binding Location}" Margin="0, 0, 15, 0"
+                       AbsoluteLayout.LayoutBounds="1, 100, 0.5, 40"
+                       AbsoluteLayout.LayoutFlags="XProportional, WidthProportional"
+                       Placeholder="Location" 
+                       HorizontalOptions="FillAndExpand"
+                       FontSize="12"/>
+                <Entry  x:Name="LandmarkOfLocation"
+                       Text="{Binding LandmarkOfLocation}" Margin="15, 0, 0, 0"
+                       AbsoluteLayout.LayoutBounds="0, 150, 0.96, 40"
+                       AbsoluteLayout.LayoutFlags="XProportional, WidthProportional"
+                       Placeholder="Landmark of Location" 
+                       HorizontalOptions="FillAndExpand"
+                       FontSize="12"/>
+                <Entry x:Name="Height"
+                       Text="{Binding Height}" Margin="15, 0, 0, 0"
+                       AbsoluteLayout.LayoutBounds="0, 200, 0.5, 40"
+                       AbsoluteLayout.LayoutFlags="XProportional, WidthProportional"
+                       Placeholder="Height (m)" 
+                       HorizontalOptions="FillAndExpand"
+                       FontSize="12"/>
+                <Entry x:Name="DMB"
+                       Text="{Binding DMB}" Margin="0, 0, 15, 0"
+                       AbsoluteLayout.LayoutBounds="1, 200, 0.5, 40"
+                       AbsoluteLayout.LayoutFlags="XProportional, WidthProportional"
+                       Placeholder="DMB (m)" 
+                       HorizontalOptions="FillAndExpand"
+                       FontSize="12"/>
+                <Entry  x:Name="TrunkWounds"
+                       Text="{Binding TrunkWounds}" Margin="15, 0, 0, 0"
+                       AbsoluteLayout.LayoutBounds="0, 250, 0.96, 40"
+                       AbsoluteLayout.LayoutFlags="XProportional, WidthProportional"
+                       Placeholder="Trunk Wounds" 
+                       HorizontalOptions="FillAndExpand"
+                       FontSize="12"/>
+            </AbsoluteLayout>
+            <AbsoluteLayout>
+                <Button Margin="55, 25, 0, 0"
+                        Text="ADD TREE"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="12"
+                        HorizontalOptions="Center"
+                        WidthRequest="110"
+                        HeightRequest="35"
+                        CornerRadius="25"
+                        BackgroundColor="White"
+                        Clicked="BtnAdd">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="#3ECFC5" Offset="0.1" />
+                            <GradientStop Color="#5DD3AA" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button Margin="170, 25, 0, 0"
+                        Text="GET LOCATION"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="12"
+                        HorizontalOptions="Center"
+                        WidthRequest="110"
+                        HeightRequest="35"
+                        CornerRadius="25"
+                        Clicked="GetLocation"
+                        BackgroundColor="White">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="#3ECFC5" Offset="0.1" />
+                            <GradientStop Color="#5DD3AA" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button Margin="285, 25, 0, 0"
+                        Text="BACK"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="12"
+                        HorizontalOptions="Center"
+                        WidthRequest="110"
+                        HeightRequest="35"
+                        CornerRadius="25"
+                        Clicked="Back"
+                        BackgroundColor="White">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="#3ECFC5" Offset="0.1" />
+                            <GradientStop Color="#5DD3AA" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+            </AbsoluteLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
